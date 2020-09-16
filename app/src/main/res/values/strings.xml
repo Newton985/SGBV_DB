@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SGBV-DB</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAo46--oLu1SyczCwfEOIMcB83mSY68izw</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
