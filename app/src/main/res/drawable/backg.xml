@@ -31,7 +31,7 @@
                             android:endX="270"
                             android:endY="320">
                             <item
-                                android:color="#D7758D"
+                                android:color="#4ca6fd"
                                 android:offset="0" />
                             <item
                                 android:color="#FFFFF9"

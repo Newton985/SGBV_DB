@@ -60,6 +60,7 @@ public class CasesActivity extends AppCompatActivity {
             public void onResponse(String response) {
                 progressBar.setVisibility(View.GONE);
                // Toast.makeText(CasesActivity.this, response, Toast.LENGTH_LONG).show();
+
                 try {
                     JSONArray jsonArray=new JSONArray(response);
                     cases.setItemAnimator(new DefaultItemAnimator());

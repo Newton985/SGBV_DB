@@ -7,92 +7,92 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".DetailsActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="3dp"
-            android:text="10:34:56"
-            android:id="@+id/time"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:background="@color/black"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:text="Rape"
-            android:id="@+id/category"
-            android:textColor="#fff"
-            android:textAllCaps="true"
-            android:layout_margin="3dp"
-            android:background="#D85D18"/>
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_margin="3dp"-->
+<!--            android:text="10:34:56"-->
+<!--            android:id="@+id/time"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:background="@color/black"/>-->
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Rape"-->
+<!--            android:id="@+id/category"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:layout_margin="3dp"-->
+<!--            android:background="#D85D18"/>-->
+<!--    </LinearLayout>-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="1dp"
-            android:drawableStart="@drawable/ic_person_black_24dp"
-            android:drawablePadding="3dp"
-            android:drawableTint="@color/colorAccent"
-            android:text="INVOLVES A FEMALE"
-            android:gravity="center"
-            android:id="@+id/c_gender"
-            android:textStyle="bold"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:drawableTint="@color/colorAccent"
-            android:drawableStart="@drawable/ic_place_black_24dp"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="1dp"
-            android:text="Nyamage-Kisii"
-            android:gravity="center"
-            android:id="@+id/c_location"
-            android:textStyle="bold"/>
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="5dp"-->
+<!--            android:layout_marginVertical="1dp"-->
+<!--            android:drawableStart="@drawable/ic_person_black_24dp"-->
+<!--            android:drawablePadding="3dp"-->
+<!--            android:drawableTint="@color/colorAccent"-->
+<!--            android:text="INVOLVES A FEMALE"-->
+<!--            android:gravity="center"-->
+<!--            android:id="@+id/c_gender"-->
+<!--            android:textStyle="bold"/>-->
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:drawableTint="@color/colorAccent"-->
+<!--            android:drawableStart="@drawable/ic_place_black_24dp"-->
+<!--            android:layout_marginHorizontal="5dp"-->
+<!--            android:layout_marginVertical="1dp"-->
+<!--            android:text="Nyamage-Kisii"-->
+<!--            android:gravity="center"-->
+<!--            android:id="@+id/c_location"-->
+<!--            android:textStyle="bold"/>-->
+<!--    </LinearLayout>-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0745678987"
-        android:layout_marginStart="5dp"
-        android:layout_marginVertical="3dp"
-        android:drawableStart="@android:drawable/stat_sys_phone_call"
-        android:drawableTint="@color/colorAccent"
-        android:drawablePadding="20dp"
-        android:textStyle="bold"
-        android:id="@+id/contact"/>
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="0745678987"-->
+<!--        android:layout_marginStart="5dp"-->
+<!--        android:layout_marginVertical="3dp"-->
+<!--        android:drawableStart="@android:drawable/stat_sys_phone_call"-->
+<!--        android:drawableTint="@color/colorAccent"-->
+<!--        android:drawablePadding="20dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:id="@+id/contact"/>-->
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:id="@+id/action"
-        android:textColor="#fff"
-        android:text="action"
-        android:textStyle="bold"
-        android:layout_marginHorizontal="10dp"/>
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:id="@+id/action"-->
+<!--        android:textColor="#fff"-->
+<!--        android:text="action"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginHorizontal="10dp"/>-->
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:text="Latitude and longitude are angles that uniquely define points on a sphere. Together, the angles comprise a coordinate scheme"
+        android:text="The red marker shows the location of the incident, Tap on the marker and Click the arrow that appears on bottom left to use Gooogle maps to naviagate to the location."
         android:layout_marginVertical="3dp"
         android:layout_marginHorizontal="10dp"
         app:layout_constraintLeft_toLeftOf="parent"

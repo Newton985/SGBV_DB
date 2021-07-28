@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="330dp"
+    android:background="#f4f4f4"
+    android:layout_height="200dp">
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:indeterminateTint="#E3FDE9"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".7"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/progressMessage"
+        android:background="#f4f4f4"
+        android:layout_margin="5dp"
+        android:text="Loading, Please Wait!"
+        android:textColor="#000"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_margin="10dp"
+        android:layout_height="0dp"
+        android:layout_weight=".4"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/progressAction"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:text="CANCEL"
+        android:textColor="#fff"/>
+
+
+
+</LinearLayout>

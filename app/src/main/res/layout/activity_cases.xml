@@ -16,7 +16,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="#3c3f41"
         android:id="@+id/my_cases"/>
 
 </LinearLayout>

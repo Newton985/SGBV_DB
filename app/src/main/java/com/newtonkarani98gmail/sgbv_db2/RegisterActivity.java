@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -61,7 +62,6 @@ public class RegisterActivity extends AppCompatActivity {
     String latitude,longitude,name_,contact_,password_,career;
     RadioGroup category;
     TextInputEditText name,contact,password;
-    ProgressBar progressBar;
     Button register;
 
     @Override
@@ -72,7 +72,6 @@ public class RegisterActivity extends AppCompatActivity {
         name=(TextInputEditText)findViewById(R.id.nametxt);
         contact=(TextInputEditText)findViewById(R.id.contact);
         password=(TextInputEditText)findViewById(R.id.password);
-        progressBar=(ProgressBar)findViewById(R.id.home_bar);
         register=(Button)findViewById(R.id.submit_bt);
 
         register.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
             case R.id.lawyer: career="lawyer"; break;
             case R.id.police: career="police"; break;
             case R.id.psychologist: career="psychologist"; break;
-            case R.id.social: career="social"; break;
+            case R.id.chief:career="chief"; break;
             default:
                 Toast.makeText(this, "SELECT A SPECIALIZATION", Toast.LENGTH_LONG).show();
                 return;
@@ -105,20 +104,24 @@ public class RegisterActivity extends AppCompatActivity {
         if (name.getText().toString().matches("")){
             Toast.makeText(this, "PROVIDE A NAME", Toast.LENGTH_SHORT).show();
         }
-        else if (contact.getText().toString().matches("")){
-            Toast.makeText(this, "PROVIDE A CONTACT", Toast.LENGTH_SHORT).show();
+        else if (contact.getText().toString().matches("") || !contact.getText().toString().startsWith("07") || !contact.getText().toString().startsWith("01")){
+            Toast.makeText(this, "PROVIDE A VALID CONTACT", Toast.LENGTH_SHORT).show();
         }
         else if (password.getText().toString().matches("")){
             Toast.makeText(this, "PROVIDE A PASSWORD", Toast.LENGTH_SHORT).show();
         } else {
-            progressBar.setVisibility(View.VISIBLE);
+
+            final EveAlertDialog eveAlertDialog=new EveAlertDialog(RegisterActivity.this);
+            eveAlertDialog.setCancelable(false);
+            eveAlertDialog.showProgressDialog();
+
             name_=name.getText().toString();
             contact_=contact.getText().toString();
             password_=password.getText().toString();
             StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    Toast.makeText(RegisterActivity.this, response, Toast.LENGTH_LONG).show();
+                    eveAlertDialog.dismiss();
                     try {
                         JSONArray jsonArray=new JSONArray(response);
                         JSONObject data=jsonArray.getJSONObject(0);
@@ -161,6 +164,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("MissingPermission")
     public void getLastLocation(){
         if (checkPermissions()) {
             if (isLocationEnabled()) {
@@ -227,6 +231,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     // @SuppressLint("MissingPermission")
+    @SuppressLint("MissingPermission")
     private void requestNewLocationData(){
 
         LocationRequest mLocationRequest = new LocationRequest();
